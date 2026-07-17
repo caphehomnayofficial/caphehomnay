@@ -1,3 +1,513 @@
+ChatGPT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Invite team members
+
+Pasted text(1).txt
+Document
+Đọc code của trang chính này của tôi để render lại tạo ra 1 trang web trên github 
+
+Worked for 3m 13s
+Tôi đã đọc file HTML render từ Next.js và dựng lại thành website tĩnh độc lập, loại bỏ các thành phần /_next/, React Server Components và script nội bộ không sử dụng được trên GitHub Pages. 
+
+
+Bộ website đã hoàn thành
+Website gồm:
+
+Giao diện responsive cho desktop, tablet và mobile.
+
+Thanh giá thị trường phía trên.
+
+Header, menu mobile và điều hướng theo section.
+
+Hero “Giá Cà Phê Hôm Nay”.
+
+Biểu đồ giá cà phê 30 ngày bằng SVG.
+
+Giá Đắk Lắk, Gia Lai, Lâm Đồng và Đắk Nông.
+
+Giá Robusta London, Arabica New York và Arabica Brazil.
+
+Nhận định ngắn hạn.
+
+Công cụ tính doanh thu hoạt động bằng JavaScript.
+
+Tin tức, cẩm nang, rao vặt, newsletter và footer.
+
+SEO meta, Open Graph và Schema cơ bản.
+
+GitHub Actions tự động triển khai GitHub Pages.
+
+GitHub Pages workflow sử dụng các phiên bản hiện được tài liệu GitHub hướng dẫn: checkout@v6, configure-pages@v5, upload-pages-artifact@v4 và deploy-pages@v4. 
+
+Tải toàn bộ source code
+Download website GitHub Pages hoàn chỉnh
+
+Xem từng file
+index.html
+
+styles.css
+
+app.js
+
+pages.yml
+
+README.md
+
+Tôi đã kiểm tra cú pháp JavaScript, cấu trúc HTML, ID các section và đường dẫn tài nguyên nội bộ. Chưa thể push trực tiếp lên GitHub vì môi trường hiện tại không có GitHub CLI đã xác thực và chưa có repository đích. Gửi URL repository GitHub, chẳng hạn https://github.com/username/repository, để tiếp tục đưa mã nguồn vào đúng repository.
+
+
+
+bây giờ bạn hãy giúp tôi hướng dẫn update những file này lên github để có 1 site hoàn chỉnh
+
+Worked for 34s
+Cách dễ nhất: tải trực tiếp bằng giao diện GitHub
+Trước tiên, tải và giải nén bộ source:
+
+Download bộ website hoàn chỉnh
+
+1. Tạo repository mới
+Truy cập GitHub, chọn New repository và thiết lập:
+
+Repository name: caphehomnay-static
+
+Visibility: Public
+
+Không chọn Add a README file
+
+Không thêm .gitignore
+
+Không thêm License
+
+Sau đó nhấn Create repository.
+
+GitHub Pages có thể xuất bản website tĩnh từ repository. Với tài khoản GitHub Free, repository dùng cho Pages thường cần để Public. 
+
+2. Upload đúng cấu trúc thư mục
+Giải nén file ZIP. Bên trong sẽ có:
+
+caphehomnay-github-pages/
+├── index.html
+├── .nojekyll
+├── README.md
+├── assets/
+│   ├── styles.css
+│   └── app.js
+└── .github/
+    └── workflows/
+        └── pages.yml
+Trong repository GitHub:
+
+Chọn Add file.
+
+Chọn Upload files.
+
+Mở thư mục caphehomnay-github-pages.
+
+Kéo toàn bộ nội dung bên trong thư mục vào GitHub.
+
+Nhập commit message:
+
+Deploy Cà Phê Hôm Nay static website
+Chọn Commit directly to the main branch.
+
+Nhấn Commit changes.
+
+GitHub hỗ trợ kéo thả file và thư mục trực tiếp trên giao diện web. 
+
+Quan trọng: Không để website bị lồng thêm một cấp thư mục.
+
+Sai:
+
+caphehomnay-static/
+└── caphehomnay-github-pages/
+    └── index.html
+Đúng:
+
+caphehomnay-static/
+├── index.html
+├── assets/
+└── .github/
+3. Kiểm tra file trên GitHub
+Sau khi upload, trang chính repository phải hiển thị:
+
+.github
+assets
+.nojekyll
+README.md
+index.html
+Mở lần lượt và kiểm tra:
+
+assets/styles.css
+
+assets/app.js
+
+.github/workflows/pages.yml
+
+File workflow hiện được cấu hình để tự triển khai khi có thay đổi trên branch main:
+
+on:
+  push:
+    branches: ["main"]
+Nếu repository của bạn dùng branch master, hãy sửa main thành master. Repository GitHub mới thường sử dụng main.
+
+4. Bật GitHub Pages
+Trong repository:
+
+Chọn Settings.
+
+Trong menu trái, chọn Pages.
+
+Tìm phần Build and deployment.
+
+Tại Source, chọn:
+
+GitHub Actions
+Bộ source đã có sẵn workflow .github/workflows/pages.yml, sử dụng quy trình triển khai static site chính thức của GitHub Pages. 
+
+5. Chạy quy trình triển khai
+Chọn tab Actions trong repository.
+
+Bạn sẽ thấy workflow:
+
+Deploy static site to GitHub Pages
+Thông thường workflow tự chạy ngay sau khi commit lên branch main.
+
+Khi workflow xuất hiện dấu tích xanh:
+
+Mở workflow.
+
+Chọn job deploy.
+
+Mở đường dẫn trong phần Deployments hoặc github-pages.
+
+Địa chỉ website sẽ có một trong hai dạng.
+
+Repository thông thường:
+
+https://USERNAME.github.io/caphehomnay-static/
+Ví dụ:
+
+https://ben123.github.io/caphehomnay-static/
+Repository đặc biệt tên USERNAME.github.io:
+
+https://USERNAME.github.io/
+6. Cách cập nhật website lần sau
+Khi cần thay đổi giao diện, dữ liệu hoặc nội dung:
+
+Sửa index.html để thay đổi nội dung.
+
+Sửa assets/styles.css để thay đổi giao diện.
+
+Sửa assets/app.js để thay đổi biểu đồ, menu, công cụ tính và tương tác.
+
+Sau đó mở đúng file trên GitHub, nhấn biểu tượng cây bút Edit, cập nhật nội dung và commit. GitHub hỗ trợ chỉnh sửa trực tiếp file trong repository. 
+
+Đối với thay đổi nhiều file, có thể vào Add file → Upload files, kéo lại các file đã sửa vào đúng vị trí và commit.
+
+Mỗi lần push hoặc commit lên main, workflow sẽ tự triển khai lại website.
+
+Cập nhật bằng Git trên máy tính
+Đây là cách phù hợp khi bạn thường xuyên sửa website.
+
+Clone repository
+Mở Git Bash hoặc Terminal:
+
+git clone https://github.com/USERNAME/caphehomnay-static.git
+cd caphehomnay-static
+Thay USERNAME bằng tài khoản GitHub của bạn.
+
+Chép source mới vào repository
+Chép đè các file:
+
+index.html
+.nojekyll
+README.md
+assets/
+.github/
+Sau đó chạy:
+
+git status
+git add .
+git commit -m "Update Cà Phê Hôm Nay website"
+git push origin main
+GitHub hướng dẫn quy trình cập nhật bằng command line gồm git add, git commit và git push. 
+
+Một lưu ý về hình ảnh
+Bản website hiện tại sử dụng nhiều hình ảnh trực tiếp từ:
+
+https://caphehomnay.com/api/media/file/...
+Website GitHub Pages vẫn hiển thị được khi caphehomnay.com hoạt động và cho phép tải hình. Tuy nhiên, để bản GitHub hoàn toàn độc lập, nên thực hiện thêm:
+
+Tải các hình ảnh từ website gốc.
+
+Lưu vào:
+
+assets/images/
+Đổi URL trong index.html.
+
+Ví dụ, từ:
+
+<img src="https://caphehomnay.com/api/media/file/banner-3.png">
+thành:
+
+<img src="assets/images/banner-3.png">
+Kết nối tên miền riêng
+Nên kiểm tra website bằng địa chỉ github.io trước. Không thay DNS của caphehomnay.com ngay vì việc đó có thể ảnh hưởng website đang hoạt động.
+
+Phương án an toàn là dùng một subdomain thử nghiệm:
+
+demo.caphehomnay.com
+Trong GitHub:
+
+Vào Settings → Pages.
+
+Nhập demo.caphehomnay.com trong Custom domain.
+
+Tại nơi quản lý DNS, tạo bản ghi:
+
+Type: CNAME
+Name: demo
+Value: USERNAME.github.io
+Giá trị CNAME phải trỏ đến USERNAME.github.io, không thêm tên repository. Sau khi cấu hình thành công, bật Enforce HTTPS. 
+
+Xử lý lỗi thường gặp
+Website báo 404
+Kiểm tra:
+
+index.html có nằm ở thư mục gốc không.
+
+Pages Source đã chọn GitHub Actions chưa.
+
+Workflow có chạy trên đúng branch main không.
+
+Tab Actions có lỗi màu đỏ không.
+
+Website không có CSS
+Đảm bảo cấu trúc:
+
+assets/styles.css
+Và trong index.html phải là:
+
+<link rel="stylesheet" href="assets/styles.css">
+Không đổi thành:
+
+<link rel="stylesheet" href="/assets/styles.css">
+Đường dẫn bắt đầu bằng / có thể gây lỗi với repository Pages dạng /caphehomnay-static/.
+
+JavaScript không hoạt động
+Kiểm tra:
+
+assets/app.js
+Và cuối index.html cần có:
+
+<script src="assets/app.js"></script>
+Workflow không tự chạy
+Mở:
+
+.github/workflows/pages.yml
+Kiểm tra branch:
+
+branches: ["main"]
+Sau đó vào tab Actions, mở workflow và chọn Run workflow.
+
+Gửi URL repository GitHub sau khi bạn tạo xong, tôi sẽ kiểm tra trực tiếp cấu trúc file, workflow và trạng thái GitHub Pages.
+
+
+image(1).png
+tôi có  bỏ 2 file như hình sao giao diện không ăn CSS, file của bạn đã gửi tôi á
+
+Worked for 17s
+Đúng lỗi nằm ở đường dẫn CSS.
+
+Trong file index.html tôi gửi, website đang gọi:
+
+<link rel="stylesheet" href="assets/styles.css">
+Nhưng ảnh repository của bạn cho thấy styles.css đang nằm ngay ngoài thư mục gốc:
+
+caphehomnay/
+├── index.html
+└── styles.css
+Vì vậy trình duyệt tìm:
+
+/assets/styles.css
+nhưng không thấy file, nên giao diện không nhận CSS.
+
+Cách sửa khuyến nghị
+Cấu trúc đúng phải là:
+
+caphehomnay/
+├── index.html
+├── assets/
+│   ├── styles.css
+│   └── app.js
+├── .nojekyll
+└── .github/
+    └── workflows/
+        └── pages.yml
+Bước 1: Xóa file styles.css đang nằm ngoài thư mục gốc
+Trong GitHub:
+
+Mở file styles.css.
+
+Nhấn biểu tượng ....
+
+Chọn Delete file.
+
+Nhấn Commit changes.
+
+Bước 2: Upload nguyên thư mục assets
+Tải lại bộ source:
+
+Download bộ website hoàn chỉnh
+
+Giải nén ZIP, bạn sẽ thấy thư mục:
+
+assets/
+├── styles.css
+└── app.js
+Trong GitHub:
+
+Chọn Add file.
+
+Chọn Upload files.
+
+Kéo nguyên thư mục assets vào vùng upload.
+
+Kiểm tra GitHub hiển thị:
+
+assets/styles.css
+assets/app.js
+Nhấn Commit changes.
+
+Sau khi hoàn tất, trang repository phải hiện:
+
+assets
+index.html
+Khi mở thư mục assets, phải có:
+
+app.js
+styles.css
+Cách sửa nhanh khác
+Bạn cũng có thể giữ styles.css ở thư mục gốc và sửa trong index.html.
+
+Đổi:
+
+<link rel="stylesheet" href="assets/styles.css">
+thành:
+
+<link rel="stylesheet" href="./styles.css">
+Tuy nhiên, website còn gọi JavaScript bằng:
+
+<script src="assets/app.js"></script>
+Do đó bạn vẫn phải upload app.js. Vì vậy, tốt nhất là dùng đúng thư mục assets.
+
+Đừng quên file JavaScript
+Hiện ảnh của bạn chỉ có:
+
+index.html
+styles.css
+Thiếu app.js, nên các chức năng sau có thể không hoạt động:
+
+Menu mobile
+
+Công cụ tính doanh thu
+
+Biểu đồ và dữ liệu tương tác
+
+Nút cuộn lên đầu trang
+
+Form đăng ký
+
+Một số hiệu ứng giao diện
+
+Sau khi upload xong
+Vào:
+
+Settings → Pages
+Nếu sử dụng workflow tôi gửi, chọn:
+
+Source: GitHub Actions
+Sau đó vào tab:
+
+Actions
+Chờ workflow có dấu tích xanh.
+
+Cuối cùng mở website và nhấn:
+
+Ctrl + F5
+để xóa cache CSS cũ.
+
+Nguyên nhân chính xác là: index.html gọi assets/styles.css, trong khi bạn upload thành /styles.css. Chỉ cần đặt lại đúng thư mục assets là giao diện sẽ nhận CSS.
+
+
+ở file index.html mà bạn đã gửi cho tôi, hãy fix lại các link trong site hãy trỏ về link trên site chính của tôi
+
+Tôi đã sửa lại index.html để toàn bộ liên kết điều hướng và CTA đều trỏ về website chính https://caphehomnay.com.
+
+Các link đã được cập nhật gồm:
+
+Logo và “Giá cà phê hôm nay” → https://caphehomnay.com/
+
+Bảng giá cà phê → https://caphehomnay.com/gia-ca-phe
+
+Thị trường cà phê → https://caphehomnay.com/tin-tuc
+
+Cẩm nang nuôi trồng → https://caphehomnay.com/cam-nang
+
+Rao vặt → https://caphehomnay.com/rao-vat
+
+Giá cà phê thế giới → https://caphehomnay.com/gia-ca-phe/truc-tuyen
+
+Đăng tin rao vặt → https://caphehomnay.com/rao-vat/dang-tin
+
+Chính sách, điều khoản, liên hệ và các bài viết cũng đã trỏ về URL chính.
+
+Tôi cũng đã sửa ô tìm kiếm để gửi truy vấn về:
+
+https://caphehomnay.com/tim-kiem?q=...
+Đồng thời bổ sung canonical:
+
+<link rel="canonical" href="https://caphehomnay.com/">
+Tải file đã sửa
+index-fixed-main-site-links.html
+
+Bạn chỉ cần đổi tên file này thành:
+
+index.html
+rồi upload đè file index.html hiện tại trên GitHub.
+
+Tải lại toàn bộ bộ source đã sửa
+Download bộ website hoàn chỉnh đã fix link
+
+Sau khi upload lại, cấu trúc nên là:
+
+index.html
+assets/
+  styles.css
+  app.js
+.github/
+  workflows/
+    pages.yml
+.nojekyll
+Sau khi commit, chờ GitHub Actions chạy xong rồi nhấn Ctrl + F5 để tải lại giao diện mới.
+
 <!doctype html>
 <html lang="vi">
 <head>
@@ -11,6 +521,8 @@
   <meta property="og:description" content="Giá cà phê trong nước và thế giới, biểu đồ biến động, tin tức và cẩm nang canh tác.">
   <meta property="og:image" content="https://caphehomnay.com/api/media/file/banner-3.png">
   <meta name="theme-color" content="#382618">
+  <link rel="canonical" href="https://caphehomnay.com/">
+  <meta property="og:url" content="https://caphehomnay.com/">
   <link rel="icon" href="https://caphehomnay.com/api/media/file/ca-phe-hom-nay-favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,18 +562,18 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Cà Phê Hôm Nay">
+      <a class="brand" href="https://caphehomnay.com/" aria-label="Cà Phê Hôm Nay">
         <img src="https://caphehomnay.com/api/media/file/ca-phe-hom-nay-logo(1).png" alt="Cà Phê Hôm Nay">
       </a>
       <nav class="desktop-nav" aria-label="Điều hướng chính">
-        <a class="active" href="#top">Giá cà phê hôm nay</a>
-        <a href="#domestic">Bảng giá cà phê</a>
-        <a href="#news">Thị trường cà phê</a>
-        <a href="#guides">Cẩm nang nuôi trồng</a>
-        <a href="#classifieds">Rao vặt</a>
+        <a class="active" href="https://caphehomnay.com/">Giá cà phê hôm nay</a>
+        <a href="https://caphehomnay.com/gia-ca-phe">Bảng giá cà phê</a>
+        <a href="https://caphehomnay.com/tin-tuc">Thị trường cà phê</a>
+        <a href="https://caphehomnay.com/cam-nang">Cẩm nang nuôi trồng</a>
+        <a href="https://caphehomnay.com/rao-vat">Rao vặt</a>
       </nav>
-      <form class="search-form" role="search" onsubmit="return false">
-        <input id="searchInput" type="search" placeholder="Tìm kiếm giá, tin tức..." aria-label="Tìm kiếm">
+      <form class="search-form" role="search" action="https://caphehomnay.com/tim-kiem" method="get">
+        <input id="searchInput" type="search" name="q" placeholder="Tìm kiếm giá, tin tức..." aria-label="Tìm kiếm">
         <button type="submit" aria-label="Thực hiện tìm kiếm">⌕</button>
       </form>
       <button class="menu-button" id="menuButton" type="button" aria-label="Mở menu" aria-expanded="false">
@@ -69,11 +581,11 @@
       </button>
     </div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Điều hướng trên điện thoại">
-      <a href="#top">Giá cà phê hôm nay</a>
-      <a href="#domestic">Bảng giá cà phê</a>
-      <a href="#news">Thị trường cà phê</a>
-      <a href="#guides">Cẩm nang nuôi trồng</a>
-      <a href="#classifieds">Rao vặt</a>
+      <a href="https://caphehomnay.com/">Giá cà phê hôm nay</a>
+      <a href="https://caphehomnay.com/gia-ca-phe">Bảng giá cà phê</a>
+      <a href="https://caphehomnay.com/tin-tuc">Thị trường cà phê</a>
+      <a href="https://caphehomnay.com/cam-nang">Cẩm nang nuôi trồng</a>
+      <a href="https://caphehomnay.com/rao-vat">Rao vặt</a>
     </nav>
   </header>
 
@@ -86,8 +598,8 @@
           <h1>Giá Cà Phê<br>Hôm Nay</h1>
           <p class="hero-summary">Giá cà phê ngày 17/07/2026 tại các vùng thu mua trọng điểm dao động từ <strong>97.900–98.500 đồng/kg</strong>, tăng khoảng 1.200 đồng/kg so với phiên trước.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#domestic">Xem giá cả nước <span>→</span></a>
-            <a class="button button-secondary" href="#forecast">Xem nhận định giá <span>↗</span></a>
+            <a class="button button-primary" href="https://caphehomnay.com/gia-ca-phe">Xem giá cả nước <span>→</span></a>
+            <a class="button button-secondary" href="https://caphehomnay.com/tin-tuc">Xem nhận định giá <span>↗</span></a>
           </div>
         </div>
 
@@ -137,7 +649,7 @@
           <p>Phần lớn vùng thu mua tăng khoảng 1.200 đồng/kg.</p>
         </div>
         <div class="mini-spark" aria-hidden="true"><svg viewBox="0 0 110 40"><polyline points="0,34 12,31 24,33 36,25 48,28 60,18 72,22 84,10 96,14 110,4"/></svg></div>
-        <a href="#forecast">Xem phân tích chi tiết <span>→</span></a>
+        <a href="https://caphehomnay.com/tin-tuc">Xem phân tích chi tiết <span>→</span></a>
       </div>
     </section>
 
@@ -145,7 +657,7 @@
       <div class="container">
         <div class="section-header reveal">
           <div><span class="section-kicker">Thị trường nội địa</span><h2>Giá cà phê hôm nay trong nước</h2></div>
-          <a href="#reference">Xem dữ liệu tham chiếu →</a>
+          <a href="https://caphehomnay.com/gia-ca-phe">Xem dữ liệu tham chiếu →</a>
         </div>
         <div class="price-layout">
           <div class="region-grid" id="regionGrid"></div>
@@ -209,7 +721,7 @@
         <div class="news-grid">
           <a class="news-card reveal" href="https://caphehomnay.com/gia-ca-phe-hom-nay-16-07-2026.html" target="_blank" rel="noopener"><div class="news-image"><img src="https://caphehomnay.com/api/media/file/gia-ca-phe-hom-nay-16-7-2026.jpg" alt="Giá cà phê hôm nay 16/07/2026"><span>PHÂN TÍCH</span></div><div class="news-body"><h3>Giá Cà Phê Hôm Nay 16/07/2026: Đắk Nông Cao Nhất 98.500 Đồng/Kg</h3><p>16/07/2026 • 15:56</p></div></a>
           <a class="news-card reveal" href="https://caphehomnay.com/gia-ca-phe-hom-nay-15-07-2026-dak-nong-cao-nhat-97-300-dong-kg.html" target="_blank" rel="noopener"><div class="news-image"><img src="https://caphehomnay.com/api/media/file/gia-ca-phe-hom-nay-15-7-2026.jpg" alt="Giá cà phê hôm nay 15/07/2026"><span>CẬP NHẬT</span></div><div class="news-body"><h3>Giá Cà Phê Hôm Nay 15/07/2026: Đắk Nông Cao Nhất 97.300 Đồng/Kg</h3><p>15/07/2026 • 14:18</p></div></a>
-          <article class="market-note reveal"><span>Góc dữ liệu</span><h3>Chênh lệch nội địa và giá quy đổi đang ở mức nào?</h3><p>Theo dữ liệu mẫu trên trang, giá quy đổi thế giới cao hơn mức trung bình nội địa khoảng 2.527 đồng/kg.</p><a href="#reference">Xem cách tính →</a></article>
+          <article class="market-note reveal"><span>Góc dữ liệu</span><h3>Chênh lệch nội địa và giá quy đổi đang ở mức nào?</h3><p>Theo dữ liệu mẫu trên trang, giá quy đổi thế giới cao hơn mức trung bình nội địa khoảng 2.527 đồng/kg.</p><a href="https://caphehomnay.com/gia-ca-phe">Xem cách tính →</a></article>
         </div>
       </div>
     </section>
@@ -254,8 +766,8 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand"><img src="https://caphehomnay.com/api/media/file/ca-phe-hom-nay-logo-footer-1.png" alt="Cà Phê Hôm Nay"><p>Cổng dữ liệu giá, tin tức và kiến thức ngành cà phê Việt Nam.</p><div class="socials"><a href="https://www.facebook.com/caphehomnay">f</a><a href="https://www.youtube.com/@caphehomnayofficial">▶</a><a href="https://x.com/caphehomnaycom">𝕏</a><a href="https://www.instagram.com/caphehomnay/">◎</a></div></div>
-      <div><h3>Liên kết nhanh</h3><a href="#top">Giá cà phê hôm nay</a><a href="#domestic">Bảng giá cà phê</a><a href="#news">Tin tức thị trường</a><a href="#guides">Cẩm nang nuôi trồng</a></div>
-      <div><h3>Danh mục</h3><a href="#domestic">Giá cà phê cả nước</a><a href="#domestic">Giá cà phê thế giới</a><a href="#forecast">Nhận định ngắn hạn</a><a href="#classifieds">Rao vặt</a></div>
+      <div><h3>Liên kết nhanh</h3><a href="https://caphehomnay.com/">Giá cà phê hôm nay</a><a href="https://caphehomnay.com/gia-ca-phe">Bảng giá cà phê</a><a href="https://caphehomnay.com/tin-tuc">Tin tức thị trường</a><a href="https://caphehomnay.com/cam-nang">Cẩm nang nuôi trồng</a></div>
+      <div><h3>Danh mục</h3><a href="https://caphehomnay.com/gia-ca-phe">Giá cà phê cả nước</a><a href="https://caphehomnay.com/gia-ca-phe/truc-tuyen">Giá cà phê thế giới</a><a href="https://caphehomnay.com/tin-tuc">Nhận định ngắn hạn</a><a href="https://caphehomnay.com/rao-vat">Rao vặt</a></div>
       <div><h3>Thông tin liên hệ</h3><p>80 Đ. Nguyễn Minh Hoàng, Bảy Hiền, Hồ Chí Minh</p><p>0565 509 398</p><p>contact@caphehomnay.com</p></div>
     </div>
     <div class="container footer-bottom"><span>© 2026 caphehomnay.com. All rights reserved.</span><div><a href="https://caphehomnay.com/chinh-sach-bao-mat">Chính sách bảo mật</a><a href="https://caphehomnay.com/dieu-khoan-su-dung">Điều khoản sử dụng</a><a href="https://caphehomnay.com/lien-he">Liên hệ</a></div></div>
@@ -265,3 +777,6 @@
   <script src="assets/app.js"></script>
 </body>
 </html>
+
+
+
