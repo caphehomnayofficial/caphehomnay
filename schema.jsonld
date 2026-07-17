@@ -1,0 +1,95 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://caphehomnay.com/#organization",
+      "name": "Cà Phê Hôm Nay",
+      "alternateName": "Ca Phe Hom Nay",
+      "url": "https://caphehomnay.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://caphehomnay.com/#logo",
+        "url": "https://caphehomnay.com/api/media/file/ca-phe-hom-nay-logo(1).png",
+        "contentUrl": "https://caphehomnay.com/api/media/file/ca-phe-hom-nay-logo(1).png",
+        "caption": "Cà Phê Hôm Nay"
+      },
+      "description": "Cà Phê Hôm Nay là website cập nhật giá cà phê trong nước, giá cà phê thế giới, dữ liệu thị trường, tin tức và kiến thức ngành cà phê Việt Nam.",
+      "email": "contact@caphehomnay.com",
+      "telephone": "+84565509398",
+      "sameAs": [
+        "https://www.facebook.com/caphehomnay",
+        "https://www.youtube.com/@caphehomnayofficial",
+        "https://www.tiktok.com/@caphehomnayofficial",
+        "https://x.com/caphehomnaycom",
+        "https://www.linkedin.com/in/caphehomnay/",
+        "https://www.instagram.com/caphehomnay/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://caphehomnay.com/#website",
+      "url": "https://caphehomnay.com/",
+      "name": "Cà Phê Hôm Nay",
+      "alternateName": "Cà Phê Hôm Nay - Giá cà phê và tin thị trường",
+      "description": "Website chính thức cung cấp giá cà phê hôm nay, biểu đồ giá, tin tức thị trường và cẩm nang nuôi trồng cà phê.",
+      "publisher": {
+        "@id": "https://caphehomnay.com/#organization"
+      },
+      "inLanguage": "vi-VN"
+    },
+    {
+      "@type": [
+        "WebPage",
+        "AboutPage"
+      ],
+      "@id": "https://caphehomnayofficial.github.io/caphehomnay/#webpage",
+      "url": "https://caphehomnayofficial.github.io/caphehomnay/",
+      "name": "Cà Phê Hôm Nay - Trang giới thiệu trên GitHub",
+      "alternateName": "Cà Phê Hôm Nay GitHub Pages",
+      "description": "Trang GitHub Pages phụ trợ dùng để giới thiệu và trình diễn giao diện của Cà Phê Hôm Nay. Trang này không thay thế website chính thức; dữ liệu cập nhật và các chức năng đầy đủ được cung cấp tại caphehomnay.com.",
+      "isAccessibleForFree": true,
+      "inLanguage": "vi-VN",
+      "dateModified": "2026-07-17",
+      "isBasedOn": {
+        "@id": "https://caphehomnay.com/#website"
+      },
+      "publisher": {
+        "@id": "https://caphehomnay.com/#organization"
+      },
+      "about": {
+        "@id": "https://caphehomnay.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://caphehomnay.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://caphehomnayofficial.github.io/caphehomnay/#primaryimage",
+        "url": "https://caphehomnay.com/api/media/file/banner-3.png",
+        "contentUrl": "https://caphehomnay.com/api/media/file/banner-3.png",
+        "caption": "Cà Phê Hôm Nay"
+      },
+      "relatedLink": [
+        "https://caphehomnay.com/",
+        "https://caphehomnay.com/gia-ca-phe",
+        "https://caphehomnay.com/tin-tuc",
+        "https://caphehomnay.com/cam-nang",
+        "https://caphehomnay.com/rao-vat"
+      ],
+      "potentialAction": {
+        "@type": "ViewAction",
+        "name": "Truy cập website chính thức Cà Phê Hôm Nay",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://caphehomnay.com/"
+        }
+      },
+      "significantLink": [
+        "https://caphehomnay.com/",
+        "https://caphehomnay.com/gia-ca-phe",
+        "https://caphehomnay.com/tin-tuc"
+      ]
+    }
+  ]
+}
