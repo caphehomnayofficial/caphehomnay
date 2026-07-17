@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cà Phê Hôm Nay - Biểu đồ giá cà phê trực tuyến</title>
+  <meta name="description" content="Cập nhật giá cà phê hôm nay tại Đắk Lắk, Gia Lai, Lâm Đồng và Đắk Nông; theo dõi giá thế giới, biểu đồ biến động và tin thị trường.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cà Phê Hôm Nay - Biểu đồ giá cà phê trực tuyến">
+  <meta property="og:description" content="Giá cà phê trong nước và thế giới, biểu đồ biến động, tin tức và cẩm nang canh tác.">
+  <meta property="og:image" content="https://caphehomnay.com/api/media/file/banner-3.png">
+  <meta name="theme-color" content="#382618">
+  <link rel="icon" href="https://caphehomnay.com/api/media/file/ca-phe-hom-nay-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://caphehomnay.com/#organization",
+        "name": "Cà Phê Hôm Nay",
+        "url": "https://caphehomnay.com/",
+        "logo": "https://caphehomnay.com/api/media/file/ca-phe-hom-nay-logo(1).png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://caphehomnay.com/#website",
+        "url": "https://caphehomnay.com/",
+        "name": "Cà Phê Hôm Nay",
+        "publisher": {"@id": "https://caphehomnay.com/#organization"},
+        "inLanguage": "vi-VN"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="market-ticker" aria-label="Thông tin thị trường">
+    <div class="container ticker-inner">
+      <span class="ticker-date">17/07/2026</span>
+      <div class="ticker-track" id="tickerTrack"></div>
+      <span class="ticker-unit">Đơn vị: USD</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Cà Phê Hôm Nay">
+        <img src="https://caphehomnay.com/api/media/file/ca-phe-hom-nay-logo(1).png" alt="Cà Phê Hôm Nay">
+      </a>
+      <nav class="desktop-nav" aria-label="Điều hướng chính">
+        <a class="active" href="#top">Giá cà phê hôm nay</a>
+        <a href="#domestic">Bảng giá cà phê</a>
+        <a href="#news">Thị trường cà phê</a>
+        <a href="#guides">Cẩm nang nuôi trồng</a>
+        <a href="#classifieds">Rao vặt</a>
+      </nav>
+      <form class="search-form" role="search" onsubmit="return false">
+        <input id="searchInput" type="search" placeholder="Tìm kiếm giá, tin tức..." aria-label="Tìm kiếm">
+        <button type="submit" aria-label="Thực hiện tìm kiếm">⌕</button>
+      </form>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Mở menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Điều hướng trên điện thoại">
+      <a href="#top">Giá cà phê hôm nay</a>
+      <a href="#domestic">Bảng giá cà phê</a>
+      <a href="#news">Thị trường cà phê</a>
+      <a href="#guides">Cẩm nang nuôi trồng</a>
+      <a href="#classifieds">Rao vặt</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-background" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Dữ liệu thị trường cập nhật</p>
+          <h1>Giá Cà Phê<br>Hôm Nay</h1>
+          <p class="hero-summary">Giá cà phê ngày 17/07/2026 tại các vùng thu mua trọng điểm dao động từ <strong>97.900–98.500 đồng/kg</strong>, tăng khoảng 1.200 đồng/kg so với phiên trước.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#domestic">Xem giá cả nước <span>→</span></a>
+            <a class="button button-secondary" href="#forecast">Xem nhận định giá <span>↗</span></a>
+          </div>
+        </div>
+
+        <article class="overview-card reveal" aria-labelledby="overviewTitle">
+          <div class="card-heading">
+            <div>
+              <span class="section-kicker">Tổng quan thị trường</span>
+              <h2 id="overviewTitle">Giá cà phê trong nước</h2>
+            </div>
+            <span class="live-badge"><i></i> 17/07/2026</span>
+          </div>
+          <div class="overview-layout">
+            <div class="average-panel">
+              <p>Giá trung bình cả nước</p>
+              <div class="average-price"><strong>98.300</strong><span>VNĐ/kg</span></div>
+              <div class="trend-row"><span class="trend up">▲ +1.200</span><small>so với phiên trước</small></div>
+              <div class="extremes">
+                <div><span>Cao nhất</span><strong>98.500</strong><small>Đắk Nông</small></div>
+                <div><span>Thấp nhất</span><strong>97.900</strong><small>Lâm Đồng</small></div>
+              </div>
+            </div>
+            <div class="chart-panel">
+              <div class="chart-title"><span>Biến động 30 ngày</span><strong>+9,37%</strong></div>
+              <svg id="mainChart" class="main-chart" viewBox="0 0 520 220" role="img" aria-label="Biểu đồ giá cà phê 30 ngày">
+                <defs>
+                  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#8a5a35" stop-opacity=".34"/>
+                    <stop offset="100%" stop-color="#8a5a35" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <g class="chart-grid"></g>
+                <path class="chart-area" fill="url(#chartFill)"></path>
+                <path class="chart-line"></path>
+                <g class="chart-points"></g>
+              </svg>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="analysis-strip">
+      <div class="container analysis-strip-inner reveal">
+        <div class="analysis-icon">☕</div>
+        <div>
+          <strong>Giá cà phê hôm nay <span>TĂNG</span></strong>
+          <p>Phần lớn vùng thu mua tăng khoảng 1.200 đồng/kg.</p>
+        </div>
+        <div class="mini-spark" aria-hidden="true"><svg viewBox="0 0 110 40"><polyline points="0,34 12,31 24,33 36,25 48,28 60,18 72,22 84,10 96,14 110,4"/></svg></div>
+        <a href="#forecast">Xem phân tích chi tiết <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="domestic">
+      <div class="container">
+        <div class="section-header reveal">
+          <div><span class="section-kicker">Thị trường nội địa</span><h2>Giá cà phê hôm nay trong nước</h2></div>
+          <a href="#reference">Xem dữ liệu tham chiếu →</a>
+        </div>
+        <div class="price-layout">
+          <div class="region-grid" id="regionGrid"></div>
+          <article class="world-card reveal">
+            <div class="world-head"><h3>Giá cà phê thế giới</h3><span>Phiên gần nhất</span></div>
+            <div id="worldPriceList"></div>
+            <p class="updated">Cập nhật: 04:50, 17/07/2026</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="forecast">
+      <div class="container info-grid">
+        <article class="info-card reveal">
+          <div class="card-heading compact"><h2>Các yếu tố tác động đến giá</h2><span>4 yếu tố</span></div>
+          <div class="factor-list">
+            <div><b>☀</b><p><strong>Thời tiết</strong><span>Điều kiện khô hạn tại Tây Nguyên có thể tác động đến năng suất.</span></p></div>
+            <div><b>＄</b><p><strong>Tỷ giá USD/VND</strong><span>Biến động tỷ giá làm thay đổi mức quy đổi và chi phí xuất khẩu.</span></p></div>
+            <div><b>◎</b><p><strong>Nguồn cung toàn cầu</strong><span>Tồn kho và tiến độ thu hoạch tại các nước sản xuất lớn vẫn là biến số chính.</span></p></div>
+            <div><b>⇄</b><p><strong>Nhu cầu thị trường</strong><span>Nhu cầu rang xay và hoạt động mua bù thiếu ảnh hưởng trực tiếp đến giá.</span></p></div>
+          </div>
+        </article>
+        <article class="info-card forecast-card reveal">
+          <div class="card-heading compact"><h2>Nhận định ngắn hạn</h2><span>Tham khảo</span></div>
+          <div class="forecast-highlight">
+            <span>Xu hướng</span>
+            <strong>Tăng ngắn hạn, nhưng còn giằng co</strong>
+            <p>Giá đang duy trì trên vùng 97.000 đồng/kg. Thị trường có thể biến động mạnh nếu giá thế giới thay đổi nhanh.</p>
+          </div>
+          <div class="levels"><div><span>Kháng cự</span><strong>99.000–100.000</strong></div><div><span>Hỗ trợ</span><strong>97.000–97.500</strong></div></div>
+          <small>* Không phải khuyến nghị mua, bán hoặc giữ hàng.</small>
+        </article>
+        <article class="info-card calculator-card reveal">
+          <div class="card-heading compact"><h2>Công cụ tính doanh thu</h2><span>Tức thời</span></div>
+          <label>Tỉnh thành<select id="provinceSelect"></select></label>
+          <div class="form-grid">
+            <label>Giá bán (đ/kg)<input id="priceInput" inputmode="numeric" value="98400"></label>
+            <label>Sản lượng (kg)<input id="quantityInput" inputmode="numeric" value="1000"></label>
+          </div>
+          <div class="revenue-result"><span>Doanh thu ước tính</span><strong id="revenueResult">98.400.000 đ</strong></div>
+          <small>* Kết quả chỉ mang tính tham khảo.</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="reference">
+      <div class="container">
+        <div class="section-header reveal"><div><span class="section-kicker">Phương pháp & quy đổi</span><h2>Dữ liệu tham chiếu</h2></div></div>
+        <div class="reference-grid">
+          <article class="reference-card reveal"><div class="reference-icon">⚖</div><h3>Giá trung bình trong nước</h3><p>Trung bình cộng mức giá tại bốn vùng thu mua trọng điểm.</p><strong>98.300 <small>đ/kg</small></strong></article>
+          <article class="reference-card reveal"><div class="reference-icon">⇄</div><h3>Quy đổi giá thế giới</h3><p>Giá USD/tấn × tỷ giá USD/VND ÷ 1.000.</p><strong>100.827 <small>đ/kg</small></strong></article>
+          <article class="reference-card reveal"><div class="reference-icon">▰</div><h3>Chi phí thu mua & vận chuyển</h3><p>Chi phí thu mua, vận chuyển và sơ chế tham khảo.</p><strong>1.800 <small>đ/kg</small></strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-header reveal"><div><span class="section-kicker">Tin mới</span><h2>Tin tức thị trường mới nhất</h2></div><a href="https://caphehomnay.com/tin-tuc" target="_blank" rel="noopener">Xem tất cả →</a></div>
+        <div class="news-grid">
+          <a class="news-card reveal" href="https://caphehomnay.com/gia-ca-phe-hom-nay-16-07-2026.html" target="_blank" rel="noopener"><div class="news-image"><img src="https://caphehomnay.com/api/media/file/gia-ca-phe-hom-nay-16-7-2026.jpg" alt="Giá cà phê hôm nay 16/07/2026"><span>PHÂN TÍCH</span></div><div class="news-body"><h3>Giá Cà Phê Hôm Nay 16/07/2026: Đắk Nông Cao Nhất 98.500 Đồng/Kg</h3><p>16/07/2026 • 15:56</p></div></a>
+          <a class="news-card reveal" href="https://caphehomnay.com/gia-ca-phe-hom-nay-15-07-2026-dak-nong-cao-nhat-97-300-dong-kg.html" target="_blank" rel="noopener"><div class="news-image"><img src="https://caphehomnay.com/api/media/file/gia-ca-phe-hom-nay-15-7-2026.jpg" alt="Giá cà phê hôm nay 15/07/2026"><span>CẬP NHẬT</span></div><div class="news-body"><h3>Giá Cà Phê Hôm Nay 15/07/2026: Đắk Nông Cao Nhất 97.300 Đồng/Kg</h3><p>15/07/2026 • 14:18</p></div></a>
+          <article class="market-note reveal"><span>Góc dữ liệu</span><h3>Chênh lệch nội địa và giá quy đổi đang ở mức nào?</h3><p>Theo dữ liệu mẫu trên trang, giá quy đổi thế giới cao hơn mức trung bình nội địa khoảng 2.527 đồng/kg.</p><a href="#reference">Xem cách tính →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="guides">
+      <div class="container">
+        <div class="section-header reveal"><div><span class="section-kicker">Kiến thức canh tác</span><h2>Cẩm nang nuôi trồng</h2></div><a href="https://caphehomnay.com/cam-nang" target="_blank" rel="noopener">Xem tất cả →</a></div>
+        <div class="guide-grid">
+          <a class="guide-card reveal" href="https://caphehomnay.com/ky-thuat-trong-va-cham-soc.html" target="_blank" rel="noopener"><img src="https://caphehomnay.com/api/media/file/ky-thuat-trong-va-cham-soc-cay-ca-phe-cho-nang-suat-cao.jpg" alt="Kỹ thuật trồng cà phê"><div><span>8 phút đọc</span><h3>Kỹ thuật trồng và chăm sóc cây cà phê cho năng suất cao</h3><p>Hướng dẫn từ chọn giống, chuẩn bị đất đến chăm sóc và phòng trừ sâu bệnh.</p></div></a>
+          <a class="guide-card reveal" href="https://caphehomnay.com/ky-thuat-cham-soc-ca-phe-mua-mua-giup-cay-khoe-han-che-sau-benh.html" target="_blank" rel="noopener"><img src="https://caphehomnay.com/api/media/file/ky-thuat-cham-soc-ca-phe-mua-mua-giup-cay-khoe-va-han-che-sau-benh.jpg" alt="Chăm sóc cà phê mùa mưa"><div><span>9 phút đọc</span><h3>Kỹ thuật chăm sóc cà phê mùa mưa</h3><p>Các bước giúp cây khỏe, thoát nước tốt và hạn chế sâu bệnh trong mùa mưa.</p></div></a>
+          <a class="guide-card reveal" href="https://caphehomnay.com/cham-soc-sau-thu-hoach.html" target="_blank" rel="noopener"><img src="https://caphehomnay.com/api/media/file/cham-soc-ca-phe-sau-thu-hoach%20(1).jpg" alt="Chăm sóc cà phê sau thu hoạch"><div><span>8 phút đọc</span><h3>Chăm sóc cây cà phê sau thu hoạch</h3><p>Phục hồi cây, quản lý cành và chuẩn bị nền dinh dưỡng cho vụ tiếp theo.</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section classifieds" id="classifieds">
+      <div class="container">
+        <div class="classifieds-head reveal">
+          <div><span class="section-kicker">Kết nối cộng đồng</span><h2>Rao vặt cà phê & nông sản</h2><p>Khu vực minh họa cho tính năng kết nối người bán và người mua trên toàn quốc.</p></div>
+          <a class="button button-primary" href="https://caphehomnay.com/rao-vat/dang-tin" target="_blank" rel="noopener">+ Đăng tin rao vặt</a>
+        </div>
+        <div class="classified-empty reveal"><div>☕</div><strong>Chưa có tin rao vặt nổi bật</strong><p>Hãy là người đầu tiên đăng tin về cà phê hoặc nông sản.</p></div>
+        <div class="trust-grid">
+          <div class="reveal"><b>✓</b><span><strong>Thông tin minh bạch</strong><small>Nội dung rõ ràng, dễ kiểm tra</small></span></div>
+          <div class="reveal"><b>↗</b><span><strong>Kết nối nhanh chóng</strong><small>Tiếp cận nhiều người mua và bán</small></span></div>
+          <div class="reveal"><b>0đ</b><span><strong>Đăng tin miễn phí</strong><small>Quy trình đơn giản, dễ sử dụng</small></span></div>
+          <div class="reveal"><b>24/7</b><span><strong>Hỗ trợ trực tuyến</strong><small>Hướng dẫn khi người dùng cần</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container newsletter-card reveal">
+        <img class="newsletter-art left" src="https://caphehomnay.com/api/media/file/tach-caffe-2.png" alt="">
+        <div><span class="section-kicker light">Bản tin mỗi ngày</span><h2>Theo dõi giá cà phê mỗi ngày</h2><p>Đăng ký nhận bản tin để cập nhật giá, tin tức và dữ liệu thị trường.</p></div>
+        <form id="newsletterForm"><input type="email" placeholder="Nhập email của bạn..." required><button type="submit">Đăng ký ngay</button></form>
+        <img class="newsletter-art right" src="https://caphehomnay.com/api/media/file/cafecay-2.png" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="https://caphehomnay.com/api/media/file/ca-phe-hom-nay-logo-footer-1.png" alt="Cà Phê Hôm Nay"><p>Cổng dữ liệu giá, tin tức và kiến thức ngành cà phê Việt Nam.</p><div class="socials"><a href="https://www.facebook.com/caphehomnay">f</a><a href="https://www.youtube.com/@caphehomnayofficial">▶</a><a href="https://x.com/caphehomnaycom">𝕏</a><a href="https://www.instagram.com/caphehomnay/">◎</a></div></div>
+      <div><h3>Liên kết nhanh</h3><a href="#top">Giá cà phê hôm nay</a><a href="#domestic">Bảng giá cà phê</a><a href="#news">Tin tức thị trường</a><a href="#guides">Cẩm nang nuôi trồng</a></div>
+      <div><h3>Danh mục</h3><a href="#domestic">Giá cà phê cả nước</a><a href="#domestic">Giá cà phê thế giới</a><a href="#forecast">Nhận định ngắn hạn</a><a href="#classifieds">Rao vặt</a></div>
+      <div><h3>Thông tin liên hệ</h3><p>80 Đ. Nguyễn Minh Hoàng, Bảy Hiền, Hồ Chí Minh</p><p>0565 509 398</p><p>contact@caphehomnay.com</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 caphehomnay.com. All rights reserved.</span><div><a href="https://caphehomnay.com/chinh-sach-bao-mat">Chính sách bảo mật</a><a href="https://caphehomnay.com/dieu-khoan-su-dung">Điều khoản sử dụng</a><a href="https://caphehomnay.com/lien-he">Liên hệ</a></div></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
